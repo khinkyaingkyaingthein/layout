@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url(/img/aqua.webp);
+}
+
+.container {
+  width: 70%;
+  height: 70vh;
+  margin: 50px auto;
+  background-color: gainsboro;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.header {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__logo {
+  font-size: 3vw;
+  color: deeppink;
+  text-shadow: 2px 2px 2px #000;
+  font-weight: 600;
+  font-family: "Pacifico", cursive;
+  z-index: 1;
+}
+.header .header__nav {
+  display: flex;
+  gap: 10px;
+  font-size: 1.5vw;
+}
+
+.main {
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+.main .main__profile {
+  background-image: url(/img/profile1.jpeg);
+  width: 40%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 50% 20%;
+}
+.main .main__description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__description_1, .main .main__description_2, .main .main__description_3, .main .main__description_4 {
+  font-size: 2vw;
+  padding: 10px 0;
+}
+.main .main__description .text {
+  font-size: 3vw;
+  color: deeppink;
+  text-shadow: 2px 2px 2px #000;
+  font-weight: 600;
+  font-family: "Pacifico", cursive;
+}
+.main .main__description .job {
+  color: rgb(20, 151, 155);
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10%;
+  margin-top: -10px;
+}
+.footer [class^=footer_] img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 90vh;
+  }
+  .header {
+    justify-content: center;
+  }
+  .header .header__logo {
+    font-size: 5vw;
+  }
+  .header .header__nav {
+    display: none;
+  }
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .main .main__profile {
+    height: 50%;
+    border-radius: 100%;
+  }
+  .main .main__description {
+    height: 50%;
+  }
+  .main .main__description_1, .main .main__description_2, .main .main__description_3, .main .main__description_4 {
+    font-size: 3vw;
+    padding: 5px 0;
+  }
+  .main .main__description .text {
+    font-size: 3vw;
+  }
+  .main .main__description .job {
+    font-size: 2.5vw;
+    font-weight: 700;
+  }
+  .footer {
+    justify-content: center;
+    margin-right: 0;
+    padding-top: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

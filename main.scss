@@ -1,0 +1,140 @@
+@import "reset";
+
+@mixin nameColor{
+    font-size: 3vw;
+    color: deeppink;
+    text-shadow: 2px 2px 2px #000;
+    font-weight: 600;
+    font-family: 'Pacifico', cursive;
+}
+
+body{
+    background-image: url(/img/aqua.webp);
+}
+
+.container{
+    //border: 2px solid black;
+    width: 70%;
+    height: 70vh;
+    margin: 50px auto;
+    background-color:gainsboro;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.header{
+    //border: 2px solid black;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #{&}__logo{
+        @include nameColor();
+        z-index: 1;
+    }
+
+    #{&}__nav{
+        display: flex;
+        gap: 10px;
+        font-size: 1.5vw;
+    }  
+}
+
+.main{
+    //border: 2px solid black;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    
+    #{&}__profile{
+        background-image: url(/img/profile1.jpeg);
+        width: 40%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        border-radius: 50% 20%;
+    } 
+    #{&}__description{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &_1,&_2,&_3,&_4{
+            font-size: 2vw;
+            padding: 10px 0;
+        }
+        .text{
+            @include nameColor();
+        }
+        .job{
+            color: rgb(20, 151, 155);
+            font-weight: 600;
+        }
+
+    }
+}
+
+.footer{
+    //border: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10%;
+    margin-top: -10px;
+    [class^="footer_"]{
+        img{
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        height: 90vh;
+    }
+    .header{
+        justify-content: center;
+
+        #{&}__logo{
+            font-size: 5vw;
+        }
+        #{&}__nav{
+            display: none;
+        }
+    }
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        #{&}__profile{
+            height: 50%;
+            border-radius: 100%;
+        }
+        #{&}__description{
+            height: 50%;
+
+            &_1,&_2,&_3,&_4{
+                font-size: 3vw;
+                padding: 5px 0;
+            }
+            .text{
+                font-size: 3vw;
+            }
+            .job{
+                font-size: 2.5vw;
+                font-weight: 700;
+            }
+        }
+    }
+    .footer{
+        justify-content: center;
+        margin-right: 0;
+        padding-top: 10px;
+    }
+}
